@@ -6254,7 +6254,7 @@ static bool
 vsync_drm_init(session_t *ps) {
 #ifdef CONFIG_VSYNC_DRM
   // Should we always open card0?
-  if (ps->drm_fd < 0 && (ps->drm_fd = open("/dev/dri/card0", O_RDWR)) < 0) {
+  if (ps->drm_fd < 0 && (ps->drm_fd = open("/dev/drm0", O_RDWR)) < 0) {
     printf_errf("(): Failed to open device.");
     return false;
   }
