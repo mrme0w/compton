@@ -733,6 +733,8 @@ set_tgt_clip(session_t *ps, XserverRegion reg, const reg_data_t *pcache_reg) {
       glx_set_clip(ps, reg, pcache_reg);
       break;
 #endif
+    default:
+      break;
   }
 }
 

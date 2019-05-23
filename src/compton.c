@@ -1722,6 +1722,8 @@ win_paint_win(session_t *ps, win *w, XserverRegion reg_paint,
             reg_paint, pcache_reg);
         break;
 #endif
+      default:
+	break;
     }
   }
 
@@ -6599,6 +6601,8 @@ init_filters(session_t *ps) {
             return false;
         }
 #endif
+      default:
+	 break;
     }
   }
 

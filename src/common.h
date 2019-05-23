@@ -1513,7 +1513,7 @@ print_timestamp(session_t *ps) {
   if (gettimeofday(&tm, NULL)) return;
 
   timeval_subtract(&diff, &tm, &ps->time_start);
-  printf("[ %5ld.%02ld ] ", diff.tv_sec, diff.tv_usec / 10000);
+  printf("[ %5ld.%02ld ] ", (long int) diff.tv_sec, diff.tv_usec / 10000);
 }
 
 /**
